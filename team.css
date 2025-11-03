@@ -1,0 +1,50 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+header h1 {
+    padding: 2rem;
+    background-color: #333;
+    color: white;
+}
+
+/* Team container using flex */
+.team-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+    flex-wrap: wrap;
+}
+
+/* Card styling */
+.team-card {
+    background-color: white;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 1rem;
+    width: 250px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.team-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Highlight team lead */
+.highlight {
+    background-color: #ffeb3b;
+    border-color: #fbc02d;
+}
+
+/* Responsive layout */
+@media screen and (max-width: 600px) {
+    .team-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}

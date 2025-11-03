@@ -1,0 +1,70 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Header styling */
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 1rem;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    margin-top: 80px;
+}
+
+/* Section styling */
+section {
+    padding: 4rem 2rem;
+    color: white;
+}
+
+/* Intro with fixed background */
+.intro {
+    background-image: url('paris1.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+/* History with linear gradient */
+.history {
+    background: linear-gradient(to right, #ff7f50, #ff6347);
+}
+
+/* Landmarks with radial gradient */
+.landmarks {
+    background: radial-gradient(circle, #4682b4, #5f9ea0);
+    background-attachment: fixed;
+}
+
+/* Culture section */
+.culture {
+    background-color: #6a5acd;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+p {
+    font-size: 1rem;
+}

@@ -1,0 +1,41 @@
+body {
+    font-family: Georgia, serif;
+    margin: 0;
+    padding: 2rem;
+    background-color: #fdf6e3;
+    color: #333;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+/* First letter large */
+p::first-letter {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+/* First line bold */
+p::first-line {
+    font-weight: bold;
+}
+
+/* Highlight key words */
+mark {
+    background-color: yellow;
+    color: black;
+}
+
+/* Blockquote styling */
+blockquote {
+    border-left: 4px solid #1e90ff;
+    background-color: #e6f0ff;
+    padding: 1rem;
+    margin: 2rem 0;
+}

@@ -1,0 +1,70 @@
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f8ff;
+    color: #333;
+}
+
+/* Header fixed at top */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #1e90ff;
+    color: white;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* Navigation links */
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 1rem;
+    font-size: 1rem;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Main content */
+main {
+    margin-top: 100px; /* to avoid overlap with fixed header */
+    text-align: center;
+    padding: 2rem;
+}
+
+/* Profile image */
+.bio img {
+    width: 150px; /* px unit */
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+/* Paragraph styling */
+.bio p {
+    width: 60%;
+    margin: auto;
+    font-size: 1rem; /* rem unit */
+    line-height: 1.5;
+}
+
+/* Footer styling */
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    background-color: #1e90ff;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
