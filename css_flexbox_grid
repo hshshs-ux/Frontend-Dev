@@ -1,0 +1,313 @@
+<!-- 1. Personal Portfolio Webpage Layout using Flexbox -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Personal Portfolio</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:Arial, sans-serif;}
+  header, main, footer{padding:20px;}
+
+  header{display:flex;justify-content:space-between;align-items:center;background:#333;color:white;}
+  header nav a{color:white;margin-left:15px;text-decoration:none;}
+
+  main{display:flex;align-items:center;justify-content:center;padding:40px;}
+  .about{flex:1;padding:20px;}
+  .image{flex:1;display:flex;align-items:center;justify-content:center;}
+  .image img{width:80%;border-radius:10px;}
+
+  footer{text-align:center;background:#333;color:white;padding:10px;}
+
+  @media(max-width:700px){
+    main{flex-direction:column;}
+    header{flex-direction:column;}
+  }
+</style>
+</head>
+<body>
+  <header>
+    <h1>Your Name</h1>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Projects</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+  <main>
+    <section class="about">
+      <h2>About Me</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer euismod neque ac sapien facilisis, ac viverra sem bibendum.</p>
+    </section>
+    <section class="image">
+      <img src="https://via.placeholder.com/400" alt="Profile">
+    </section>
+  </main>
+  <footer>© 2025 Your Name</footer>
+</body>
+</html>
+
+<!-- 2. Product Gallery using CSS Grid -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Product Gallery</title>
+<style>
+  body{font-family:Arial, sans-serif;padding:20px;}
+  .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;}
+  .product{background:#f0f0f0;padding:20px;text-align:center;transition:transform .3s;}
+  .product:hover{transform:scale(1.05);}
+  @media(max-width:900px){.gallery{grid-template-columns:repeat(2,1fr);}}
+  @media(max-width:600px){.gallery{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+  <div class="gallery">
+    <div class="product"><h3>Product 1</h3><p>$10</p></div>
+    <div class="product"><h3>Product 2</h3><p>$15</p></div>
+    <div class="product"><h3>Product 3</h3><p>$20</p></div>
+    <div class="product"><h3>Product 4</h3><p>$25</p></div>
+    <div class="product"><h3>Product 5</h3><p>$30</p></div>
+    <div class="product"><h3>Product 6</h3><p>$35</p></div>
+    <div class="product"><h3>Product 7</h3><p>$40</p></div>
+    <div class="product"><h3>Product 8</h3><p>$45</p></div>
+  </div>
+</body>
+</html>
+
+<!-- 3. Homepage using Flexbox -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Homepage</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{font-family:Arial, sans-serif;}
+  header{display:flex;justify-content:space-around;background:#444;color:white;padding:15px;}
+  main{display:flex;justify-content:center;align-items:center;gap:20px;padding:30px;}
+  .box{background:#ddd;padding:30px;transition:transform .3s;}
+  .box:hover{transform:rotate(2deg);}
+  footer{text-align:center;background:#444;color:white;padding:10px;position:relative;bottom:0;width:100%;}
+</style>
+</head>
+<body>
+  <header>
+    <a href="#">Home</a>
+    <a href="#">Services</a>
+    <a href="#">Projects</a>
+    <a href="#">Contact</a>
+  </header>
+  <main>
+    <div class="box">Services</div>
+    <div class="box">Projects</div>
+    <div class="box">Contact</div>
+  </main>
+  <footer>© 2025 Your Site</footer>
+</body>
+</html>
+
+<!-- 4. Dashboard using CSS Grid -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashboard</title>
+<style>
+  body{font-family:Arial,sans-serif;}
+  .container{display:grid;grid-template-columns:1fr 3fr;grid-template-rows:auto 1fr;grid-template-areas:"header header""sidebar main";gap:10px;height:100vh;}
+  header{grid-area:header;background:#333;color:#fff;padding:20px;text-align:center;}
+  aside{grid-area:sidebar;background:#f4f4f4;padding:20px;}
+  main{grid-area:main;display:grid;grid-template-columns:1fr 1fr;grid-gap:10px;}
+  .box{background:#ddd;padding:20px;transition:.3s;}
+  .box:hover{transform:scale(1.05);box-shadow:0 4px 8px rgba(0,0,0,0.3);}
+  .span2{grid-column:span 2;}
+</style>
+</head>
+<body>
+  <div class="container">
+    <header>Dashboard Header</header>
+    <aside>Sidebar</aside>
+    <main>
+      <div class="box">Box 1</div>
+      <div class="box">Box 2</div>
+      <div class="box span2">Wide Box</div>
+      <div class="box">Box 4</div>
+    </main>
+  </div>
+</body>
+</html>
+
+<!-- 5. Pricing Section using Flexbox -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pricing</title>
+<style>
+  body{font-family:Arial,sans-serif;text-align:center;padding:40px;}
+  .pricing{display:flex;justify-content:center;gap:20px;}
+  .card{background:#f0f0f0;padding:20px;width:200px;border-radius:10px;transition:transform .3s;animation:fadeIn 1s ease;}
+  .card:hover{transform:translateY(-10px);}
+  .highlight{background:#aaf;transform:scale(1.1);}
+  @keyframes fadeIn{from{opacity:0;}to{opacity:1;}}
+  @media(max-width:750px){.pricing{flex-direction:column;align-items:center;}}
+</style>
+</head>
+<body>
+  <div class="pricing">
+    <div class="card">Basic</div>
+    <div class="card highlight">Pro</div>
+    <div class="card">Enterprise</div>
+  </div>
+</body>
+</html>
+
+<!-- 6. Blog Layout using CSS Grid -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog Layout</title>
+<style>
+  body{font-family:Arial,sans-serif;}
+  .container{display:grid;grid-template-areas:"header header""sidebar main""footer footer";grid-template-columns:1fr 3fr;gap:20px;padding:20px;}
+  header{grid-area:header;background:#333;color:white;padding:20px;}
+  aside{grid-area:sidebar;background:#f0f0f0;padding:20px;}
+  main{grid-area:main;display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+  footer{grid-area:footer;background:#333;color:white;text-align:center;padding:10px;}
+  @media(max-width:800px){.container{grid-template-areas:"header""main""sidebar""footer";grid-template-columns:1fr;}main{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+  <div class="container">
+    <header>My Blog</header>
+    <aside>Categories</aside>
+    <main>
+      <article>Blog Post 1</article>
+      <article>Blog Post 2</article>
+    </main>
+    <footer>Contact Info</footer>
+  </div>
+</body>
+</html>
+
+<!-- 7. CSS Loading Animation -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Loading Animation</title>
+<style>
+  body{display:flex;align-items:center;justify-content:center;height:100vh;background:#f0f0f0;}
+  .loader{display:flex;gap:10px;}
+  .dot{width:15px;height:15px;background:#333;border-radius:50%;animation:bounce 1s infinite;}
+  .dot:nth-child(2){animation-delay:0.2s;}
+  .dot:nth-child(3){animation-delay:0.4s;}
+  @keyframes bounce{0%,100%{transform:translateY(0);}50%{transform:translateY(-20px);}}
+</style>
+</head>
+<body>
+  <div class="loader">
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+  </div>
+</body>
+</html>
+
+<!-- 8. Photo Gallery using Grid -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Photo Gallery</title>
+<style>
+  body{font-family:Arial,sans-serif;padding:20px;}
+  .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;}
+  figure{margin:0;overflow:hidden;}
+  img{width:100%;transition:transform .5s;}
+  figure:hover img{transform:scale(1.05);}
+  figcaption{text-align:center;padding:5px;}
+</style>
+</head>
+<body>
+  <div class="gallery">
+    <figure><img src="https://via.placeholder.com/200" alt=""><figcaption>Caption 1</figcaption></figure>
+    <figure><img src="https://via.placeholder.com/200" alt=""><figcaption>Caption 2</figcaption></figure>
+  </div>
+</body>
+</html>
+
+<!-- 9. Card Flip Animation -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Card Flip</title>
+<style>
+  body{display:flex;align-items:center;justify-content:center;height:100vh;background:#f0f0f0;}
+  .card{width:300px;height:200px;perspective:1000px;}
+  .inner{position:relative;width:100%;height:100%;transition:transform .6s;transform-style:preserve-3d;}
+  .card:hover .inner{transform:rotateY(180deg);}
+  .front,.back{position:absolute;width:100%;height:100%;backface-visibility:hidden;border:1px solid #ccc;border-radius:10px;display:flex;align-items:center;justify-content:center;}
+  .front{background:#fff;}
+  .back{background:#aaf;transform:rotateY(180deg);}
+</style>
+</head>
+<body>
+  <div class="card">
+    <div class="inner">
+      <div class="front">Front</div>
+      <div class="back">Back</div>
+    </div>
+  </div>
+</body>
+</html>
+
+<!-- 10. Combined Responsive Webpage using Flexbox and Grid -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Combined Layout</title>
+<style>
+  body{font-family:Arial,sans-serif;margin:0;}
+  header{display:flex;justify-content:space-between;align-items:center;background:#333;color:white;padding:15px;}
+  main{display:grid;grid-template-columns:2fr 1fr;gap:20px;padding:20px;}
+  article{background:#f0f0f0;padding:20px;display:flex;flex-direction:column;gap:10px;animation:fadeUp 1s;}
+  .boxes{display:flex;gap:10px;}
+  .box{flex:1;background:#ccc;padding:20px;text-align:center;}
+  footer{text-align:center;background:#333;color:white;padding:10px;}
+  @keyframes fadeUp{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
+  @media(max-width:700px){main{grid-template-columns:1fr;}.boxes{flex-direction:column;}}
+</style>
+</head>
+<body>
+  <header><h1>Logo</h1><nav><a href="#" style="color:white;">Home</a></nav></header>
+  <main>
+    <article>
+      <h2>Article</h2>
+      <div class="boxes">
+        <div class="box">Box 1</div>
+        <div class="box">Box 2</div>
+        <div class="box">Box 3</div>
+      </div>
+    </article>
+    <aside style="background:#eee;padding:20px;">Sidebar</aside>
+  </main>
+  <footer>© 2025 Combined Layout</footer>
+</body>
+</html>
