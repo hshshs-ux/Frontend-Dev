@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>All 10 CSS Exercises</title>
+<style>
+/* =============================
+   GLOBAL STYLES
+============================= */
+*{box-sizing:border-box;margin:0;padding:0;font-family:Arial, sans-serif}
+section{margin:40px auto;max-width:900px;padding:20px;border:1px solid #ddd;border-radius:10px;background:#fafafa}
+h1{text-align:center;margin-bottom:20px;font-size:28px}
+h2{text-align:center;margin-bottom:12px;margin-top:30px;color:#333}
+p{text-align:center;margin-bottom:10px}
+
+/* =============================
+   Q1 — Borders and Padding
+============================= */
+.q1 .box-row{display:flex;gap:18px;flex-wrap:wrap;justify-content:center;margin-top:20px}
+.q1 .box{width:160px;height:120px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:8px;transition:border-color .25s ease}
+.q1 .solid{border:3px solid #2b6cb0;padding:6px}
+.q1 .dashed{border:3px dashed #d69e2e;padding:12px}
+.q1 .double{border:6px double #9f7aea;padding:16px}
+.q1 .groove{border:4px groove #38a169;padding:20px}
+.q1 .rounded{border:3px solid #e53e3e;padding:28px;border-radius:16px}
+.q1 .box:hover{border-color:#000}
+
+/* =============================
+   Q2 — Height and Width
+============================= */
+.q2 .container{display:flex;gap:20px;align-items:center;justify-content:center;flex-wrap:wrap}
+.q2 .box{display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;padding:8px;border-radius:6px}
+.q2 .box-px{height:150px;width:250px;background:#3182ce}
+.q2 .box-percent{height:30vh;width:30%;min-width:140px;background:#e53e3e}
+.q2 .box-em{height:6em;width:12em;background:#38a169}
+.q2 .box-percent{min-height:120px;max-width:280px;overflow:auto}
+
+/* =============================
+   Q3 — Gradient Background
+============================= */
+.q3 .linear{min-height:200px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:40px;background:linear-gradient(135deg,#f6d365 0%,#fda085 100%)}
+.q3 .radial{min-height:200px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:60px;background:radial-gradient(circle at center,#a0c4ff 0%,#7b61ff 60%);background-attachment:fixed;color:#fff}
+
+/* =============================
+   Q4 — Shadows and Depth
+============================= */
+.q4 .cards{display:flex;gap:22px;align-items:flex-start;justify-content:center;flex-wrap:wrap;margin-top:20px}
+.q4 .card{width:260px;padding:20px;border-radius:12px;background:#fff;transition:box-shadow .28s ease,transform .28s ease;text-align:center}
+.q4 .card-1{box-shadow:0 4px 8px rgba(0,0,0,.08)}
+.q4 .card-2{box-shadow:0 8px 18px rgba(0,0,0,.12)}
+.q4 .card-3{box-shadow:0 14px 34px rgba(0,0,0,.18)}
+.q4 .card:hover{transform:translateY(-8px);box-shadow:0 24px 48px rgba(0,0,0,.22)}
+
+/* =============================
+   Q5 — Advanced Selectors
+============================= */
+.q5 input[type="text"]{border:2px solid #3182ce;padding:8px;margin:8px 0;display:block;width:80%;margin:auto}
+.q5 a[href^="https"]{color:#2b6cb0;text-decoration:underline;display:block;text-align:center}
+.q5 .items{list-style:none;margin-top:10px}
+.q5 .items li:nth-child(odd){background:#f0f6ff}
+.q5 .items li:nth-child(2){font-weight:bold}
+.q5 .items li::before{content:"• ";color:#ff6b6b}
+.q5 input:focus{outline:none;box-shadow:0 0 0 3px rgba(66,153,225,.2)}
+
+/* =============================
+   Q6 — Transformations
+============================= */
+.q6 .transforms{display:flex;gap:20px;align-items:center;justify-content:center;flex-wrap:wrap;margin-top:20px}
+.q6 .tbox{display:flex;flex-direction:column;align-items:center}
+.q6 .shape{width:120px;height:120px;display:flex;align-items:center;justify-content:center;background:#e2e8f0;border-radius:8px;transition:all .4s ease}
+.q6 .rotate .shape:hover{transform:rotate(14deg)}
+.q6 .scale .shape:hover{transform:scale(1.18)}
+.q6 .translate .shape:hover{transform:translateY(-14px) translateX(8px)}
+.q6 .skew .shape:hover{transform:skewX(-12deg)}
+.q6 figcaption{margin-top:8px;font-size:14px}
+
+/* =============================
+   Q7 — Typography
+============================= */
+.q7 article{max-width:760px;margin:auto;text-align:left}
+.q7 h3{font-size:26px;margin-bottom:10px}
+.q7 p{line-height:1.6;margin:18px 0;font-size:18px;text-align:left}
+.q7 mark{background:#fff3b0;color:#553d00;padding:2px 4px;border-radius:3px}
+.q7 strong{color:#1a202c}
+.q7 em{color:#805ad5}
+.q7 p::first-letter{font-size:36px;font-weight:700;float:left;margin-right:8px}
+.q7 p::first-line{letter-spacing:.6px}
+
+/* =============================
+   Q8 — Box Model
+============================= */
+.q8 .box-demo{background:transparent;padding:32px;margin:30px;border:6px solid #2d3748;text-align:center}
+.q8 .box-demo .content{background:#bee3f8;padding:20px;width:220px;text-align:center;margin:auto}
+.q8 .desc{font-size:13px;color:#2d3748;margin:6px 0}
+
+/* =============================
+   Q9 — Outline and Focus Form
+============================= */
+.q9 form{background:#fff;padding:20px;border-radius:8px;box-shadow:0 6px 18px rgba(0,0,0,.06);width:320px;margin:auto}
+.q9 label{display:block;margin-bottom:12px;text-align:left}
+.q9 input,.q9 textarea{width:100%;padding:10px;border:1px solid #cbd5e0;border-radius:6px;outline:none}
+.q9 textarea{min-height:100px}
+.q9 input:focus,.q9 textarea:focus{outline:3px solid rgba(66,153,225,.22);outline-offset:4px}
+.q9 button{margin-top:8px;padding:10px 14px;border-radius:6px;border:none;background:#2b6cb0;color:#fff;cursor:pointer}
+
+/* =============================
+   Q10 — Navigation Bar
+============================= */
+.q10 .navbar{display:flex;gap:10px;justify-content:center;padding:14px;background:#fff;box-shadow:0 1px 4px rgba(0,0,0,.06)}
+.q10 .navlink{padding:10px 14px;border:2px solid transparent;border-radius:6px;text-decoration:none;color:#1a202c;transition:all .3s ease}
+.q10 .navlink:hover{transform:translateY(-4px);border-color:#cbd5e0}
+.q10 .navlink.active{background:#2b6cb0;color:#fff}
+.q10 footer{text-align:center;padding:12px;background:#f7fafc;margin-top:10px}
+</style>
+</head>
+<body>
+
+<h1>CSS Practice — All 10 Exercises</h1>
+
+<!-- =========================
+     Q1 — Borders & Padding
+========================= -->
+<section class="q1">
+  <h2>1. Borders and Padding</h2>
+  <div class="box-row">
+    <div class="box solid">Solid</div>
+    <div class="box dashed">Dashed</div>
+    <div class="box double">Double</div>
+    <div class="box groove">Groove</div>
+    <div class="box rounded">Rounded</div>
+  </div>
+</section>
+
+<!-- =========================
+     Q2 — Height & Width
+========================= -->
+<section class="q2">
+  <h2>2. Height & Width Practice</h2>
+  <div class="container">
+    <div class="box box-px">PX Box</div>
+    <div class="box box-percent">Percent Box</div>
+    <div class="box box-em">EM Box</div>
+  </div>
+</section>
+
+<!-- =========================
+     Q3 — Gradient Background
+========================= -->
+<section class="q3">
+  <h2>3. Gradient Background</h2>
+  <div class="linear"><p>Linear Gradient Example</p></div>
+  <div class="radial"><p>Radial Gradient Example (Fixed)</p></div>
+</section>
+
+<!-- =========================
+     Q4 — Shadows and Depth
+========================= -->
+<section class="q4">
+  <h2>4. Shadows & Depth</h2>
+  <div class="cards">
+    <div class="card card-1"><h3>Card 1</h3><p>Subtle shadow</p></div>
+    <div class="card card-2"><h3>Card 2</h3><p>Medium shadow</p></div>
+    <div class="card card-3"><h3>Card 3</h3><p>Deep shadow</p></div>
+  </div>
+</section>
+
+<!-- =========================
+     Q5 — Advanced Selectors
+========================= -->
+<section class="q5">
+  <h2>5. Advanced CSS Selectors</h2>
+  <input type="text" placeholder="Attribute selector [type=text]">
+  <a href="https://example.com">HTTPS link</a>
+  <ul class="items">
+    <li>Item 1</li><li>Item 2</li><li>Item 3</li><li>Item 4</li>
+  </ul>
+</section>
+
+<!-- =========================
+     Q6 — Transformations
+========================= -->
+<section class="q6">
+  <h2>6. CSS Transformations</h2>
+  <div class="transforms">
+    <figure class="tbox rotate"><div class="shape">Rotate</div><figcaption>rotate()</figcaption></figure>
+    <figure class="tbox scale"><div class="shape">Scale</div><figcaption>scale()</figcaption></figure>
+    <figure class="tbox translate"><div class="shape">Translate</div><figcaption>translate()</figcaption></figure>
+    <figure class="tbox skew"><div class="shape">Skew</div><figcaption>skew()</figcaption></figure>
+  </div>
+</section>
+
+<!-- =========================
+     Q7 — Typography
+========================= -->
+<section class="q7">
+  <h2>7. Typography and Text Styling</h2>
+  <article>
+    <h3>The Joy of Clean Typography</h3>
+    <p><strong>Good typography</strong> makes content readable and beautiful. <em>Spacing</em> and <mark>highlighting</mark> help scan the page quickly.</p>
+    <p>Use different font families, weights, and sizes to create hierarchy. Legibility is improved by appropriate line-height and letter-spacing.</p>
+  </article>
+</section>
+
+<!-- =========================
+     Q8 — Box Model
+========================= -->
+<section class="q8">
+  <h2>8. Box Model Exploration</h2>
+  <div class="box-demo">
+    <div class="content">Content</div>
+    <p class="desc">Padding → Border → Margin visualization</p>
+  </div>
+</section>
+
+<!-- =========================
+     Q9 — Outline & Focus
+========================= -->
+<section class="q9">
+  <h2>9. Outline and Focus Styling Form</h2>
+  <form>
+    <label>Name <input type="text" placeholder="Your name"></label>
+    <label>Message <textarea placeholder="Type a message"></textarea></label>
+    <button type="submit">Send</button>
+  </form>
+</section>
+
+<!-- =========================
+     Q10 — Navbar
+========================= -->
+<section class="q10">
+  <h2>10. Navigation Bar</h2>
+  <nav class="navbar">
+    <a href="#" class="navlink active">Home</a>
+    <a href="#" class="navlink">About</a>
+    <a href="#" class="navlink">Services</a>
+    <a href="#" class="navlink">Blog</a>
+    <a href="#" class="navlink">Contact</a>
+  </nav>
+  <footer>© Navigation Demo</footer>
+</section>
+
+</body>
+</html>
