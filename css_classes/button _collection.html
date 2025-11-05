@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Styled Button Collection</title>
+
+  <style>
+    /* ====== Basic Page Styling ====== */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f6f9;
+      margin: 0;
+      padding: 0;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    header {
+      text-align: center;
+      background-color: #0d6efd;
+      color: white;
+      width: 100%;
+      padding: 2em 0;
+    }
+
+    header h1 {
+      margin: 0;
+    }
+
+    main {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.5em;
+      padding: 3em 1em;
+    }
+
+    footer {
+      background-color: #0d6efd;
+      color: white;
+      text-align: center;
+      padding: 1em;
+      width: 100%;
+    }
+
+    /* ====== Base Button Styles ====== */
+    button {
+      font-size: 1em;
+      padding: 12px 24px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /* ====== Primary Button ====== */
+    .btn-primary {
+      background-color: #0d6efd;
+      color: white;
+    }
+
+    .btn-primary:hover {
+      background-color: #0b5ed7;
+    }
+
+    .btn-primary:active {
+      background-color: #084298;
+    }
+
+    .btn-primary:focus {
+      outline: 3px solid #b6d4fe;
+    }
+
+    /* ====== Secondary Button ====== */
+    .btn-secondary {
+      background-color: #6c757d;
+      color: white;
+    }
+
+    .btn-secondary:hover {
+      background-color: #5c636a;
+    }
+
+    .btn-secondary:active {
+      background-color: #495057;
+    }
+
+    .btn-secondary:focus {
+      outline: 3px solid #ced4da;
+    }
+
+    /* ====== Outline Button ====== */
+    .btn-outline {
+      background-color: transparent;
+      color: #0d6efd;
+      border: 2px solid #0d6efd;
+    }
+
+    .btn-outline:hover {
+      background-color: #0d6efd;
+      color: white;
+    }
+
+    .btn-outline:active {
+      background-color: #084298;
+      border-color: #084298;
+      color: white;
+    }
+
+    .btn-outline:focus {
+      outline: 3px solid #b6d4fe;
+    }
+
+    /* ====== Disabled Button ====== */
+    .btn-disabled {
+      background-color: #ced4da;
+      color: #6c757d;
+      cursor: not-allowed;
+      box-shadow: none;
+      border: none;
+    }
+
+    .btn-disabled:disabled {
+      opacity: 0.7;
+    }
+
+    /* ====== Responsive Design ====== */
+    @media (max-width: 700px) {
+      main {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      button {
+        width: 80%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Styled Button Collection</h1>
+    <p>Different button styles with hover, active, focus, and disabled effects.</p>
+  </header>
+
+  <main>
+    <button class="btn-primary">Primary Button</button>
+    <button class="btn-secondary">Secondary Button</button>
+    <button class="btn-outline">Outline Button</button>
+    <button class="btn-disabled" disabled>Disabled Button</button>
+  </main>
+
+  <footer>
+    © 2025 Styled Buttons Demo | Created for CSS Exercises
+  </footer>
+</body>
+</html>

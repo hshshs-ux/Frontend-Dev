@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini UI Layout</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      background: linear-gradient(135deg, #f0f4f8, #e3f2fd);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    header, footer {
+      background-color: #0d6efd;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      width: 100%;
+    }
+
+    main {
+      background: white;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      border-radius: 12px;
+      padding: 20px 30px;
+      margin: 30px;
+      width: 90%;
+      max-width: 400px;
+      display: flex;
+      flex-direction: column;
+      gap: 1em;
+      align-items: center;
+    }
+
+    img {
+      width: 100%;
+      max-width: 200px;
+      border-radius: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+
+    input, button {
+      width: 100%;
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      transition: all 0.3s ease;
+      font-size: 1em;
+    }
+
+    input:focus {
+      border-color: #0dfd31;
+      box-shadow: 0 0 6px rgba(13,110,253,0.4);
+      outline: none;
+    }
+
+    button {
+      background-color: #0d6efd;
+      color: white;
+      cursor: pointer;
+      border: none;
+    }
+
+    button:hover {
+      background-color: #0b5ed7;
+    }
+
+    footer {
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h2>Mini UI Layout</h2>
+  </header>
+
+  <main>
+    <img src="https://via.placeholder.com/200" alt="Sample Image">
+    <form>
+      <input type="text" placeholder="Enter your name" required>
+      <button type="submit">Submit</button>
+    </form>
+  </main>
+
+  <footer>
+    © 2025 Mini UI | Created for CSS Practice
+  </footer>
+</body>
+</html>

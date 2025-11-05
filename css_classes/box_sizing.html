@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Box-Sizing Comparison</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f0f4f8;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      text-align: center;
+    }
+
+    .container {
+      display: flex;
+      gap: 2em;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .box {
+      width: 200px;
+      padding: 20px;
+      border: 5px solid #333;
+      color: white;
+      font-weight: bold;
+    }
+
+    .default {
+      background-color: #0d6efd;
+      box-sizing: content-box;
+    }
+
+    .border-box {
+      background-color: #198754;
+      box-sizing: border-box;
+    }
+
+    p {
+      max-width: 500px;
+      color: #444;
+      margin-top: 1em;
+    }
+  </style>
+</head>
+<body>
+  <h2>Box-Sizing Comparison</h2>
+  <div class="container">
+    <div class="box default">Default (content-box)</div>
+    <div class="box border-box">Border-Box</div>
+  </div>
+  <p>
+    The blue box (<strong>content-box</strong>) adds padding and border to the total width,
+    while the green box (<strong>border-box</strong>) includes them inside the specified width.
+  </p>
+</body>
+</html>

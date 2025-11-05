@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Image Showcase Layout</title>
+
+  <style>
+    /* ====== Basic Styling ====== */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f7fa;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    header {
+      text-align: center;
+      padding: 2em 1em;
+      background-color: #0d6efd;
+      color: white;
+    }
+
+    header h1 {
+      margin-bottom: 0.3em;
+    }
+
+    main {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5em;
+      padding: 2em;
+      justify-items: center;
+    }
+
+    figure {
+      position: relative;
+      width: 100%;
+      max-width: 300px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    /* ====== Image Styling ====== */
+    figure img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 12px;
+      display: block;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    /* Overlay effect */
+    figure::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0);
+      transition: background 0.3s ease-in-out;
+      border-radius: 12px;
+    }
+
+    /* Hover effects */
+    figure:hover img {
+      transform: scale(1.1);
+    }
+
+    figure:hover::after {
+      background: rgba(0, 0, 0, 0.4);
+    }
+
+    /* Caption styling */
+    figcaption {
+      text-align: center;
+      padding: 0.8em 0;
+      font-weight: 600;
+      color: #333;
+      background-color: #fff;
+    }
+
+    /* ====== Responsive Design ====== */
+    @media (max-width: 700px) {
+      main {
+        grid-template-columns: 1fr;
+      }
+
+      figure {
+        max-width: 90%;
+      }
+    }
+
+    footer {
+      text-align: center;
+      padding: 1em;
+      background-color: #0d6efd;
+      color: white;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Image Showcase Layout</h1>
+    <p>Hover over the images to see the scaling and dark overlay effects.</p>
+  </header>
+
+  <main>
+    <figure>
+      <img src="https://picsum.photos/400/300?random=1" alt="Mountain View" />
+      <figcaption>Majestic Mountains</figcaption>
+    </figure>
+
+    <figure>
+      <img src="https://picsum.photos/400/300?random=2" alt="Beach Sunset" />
+      <figcaption>Peaceful Sunset</figcaption>
+    </figure>
+
+    <figure>
+      <img src="https://picsum.photos/400/300?random=3" alt="City Skyline" />
+      <figcaption>Urban Skyline</figcaption>
+    </figure>
+
+    <figure>
+      <img src="https://picsum.photos/400/300?random=4" alt="Forest Path" />
+      <figcaption>Misty Forest</figcaption>
+    </figure>
+
+    <figure>
+      <img src="https://picsum.photos/400/300?random=5" alt="Desert Dunes" />
+      <figcaption>Golden Dunes</figcaption>
+    </figure>
+
+    <figure>
+      <img src="https://picsum.photos/400/300?random=6" alt="Ocean Waves" />
+      <figcaption>Calm Ocean</figcaption>
+    </figure>
+  </main>
+
+  <footer>
+    © 2025 Image Showcase Demo | Created for CSS Exercises
+  </footer>
+</body>
+</html>

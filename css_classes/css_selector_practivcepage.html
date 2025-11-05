@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSS Selectors Practice Page</title>
+
+  <style>
+    /* ====== Basic Page Styling ====== */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f7f9fc;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    header, footer {
+      text-align: center;
+      background-color: #0d6efd;
+      color: white;
+      padding: 1.5em;
+    }
+
+    main {
+      padding: 2em;
+      line-height: 1.6;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    section {
+      margin-bottom: 2em;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      padding: 1.5em;
+    }
+
+    h2 {
+      color: #0d6efd;
+      margin-bottom: 0.5em;
+    }
+
+    /* ================================
+       ELEMENT SELECTOR
+       Targets all <p> elements
+    =================================*/
+    p {
+      color: #444;
+      margin-bottom: 1em;
+    }
+
+    /* ================================
+       CLASS SELECTOR
+       Targets elements with .highlight class
+    =================================*/
+    .highlight {
+      background-color: #ffeeba;
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+
+    /* ================================
+       ID SELECTOR
+       Targets the element with id="special"
+    =================================*/
+    #special {
+      color: #d63384;
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+
+    /* ================================
+       ATTRIBUTE SELECTOR
+       Targets links with target="_blank"
+    =================================*/
+    a[target="_blank"] {
+      color: #198754;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    a[target="_blank"]:hover {
+      text-decoration: underline;
+    }
+
+    /* ================================
+       DESCENDANT COMBINATOR
+       Targets <em> inside <p>
+    =================================*/
+    p em {
+      color: #dc3545;
+      font-style: italic;
+    }
+
+    /* ================================
+       CHILD COMBINATOR (>)
+       Targets list items that are *direct children* of .menu
+    =================================*/
+    .menu > li {
+      color: #0d6efd;
+      font-weight: bold;
+    }
+
+    /* ================================
+       ADJACENT SIBLING (+)
+       Styles the paragraph that comes right after an h3
+    =================================*/
+    h3 + p {
+      background-color: #e2e6ea;
+      padding: 10px;
+      border-left: 4px solid #0d6efd;
+    }
+
+    /* ================================
+       GENERAL SIBLING (~)
+       Styles all paragraphs that come after a .note
+    =================================*/
+    .note ~ p {
+      color: #6c757d;
+      font-style: italic;
+    }
+
+    footer {
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>CSS Selectors Practice Page</h1>
+    <p>Demonstrating different selector types and combinators in CSS.</p>
+  </header>
+
+  <main>
+    <!-- ELEMENT SELECTOR -->
+    <section>
+      <h2>Element Selector</h2>
+      <p>This paragraph is styled using the <strong>element selector</strong> for <code>&lt;p&gt;</code>.</p>
+      <p>All paragraphs share the same font color and spacing.</p>
+    </section>
+
+    <!-- CLASS SELECTOR -->
+    <section>
+      <h2>Class Selector</h2>
+      <p>This sentence has a <span class="highlight">highlighted text</span> using a <code>.highlight</code> class.</p>
+    </section>
+
+    <!-- ID SELECTOR -->
+    <section>
+      <h2>ID Selector</h2>
+      <p id="special">This paragraph is selected uniquely using the <code>#special</code> ID selector.</p>
+    </section>
+
+    <!-- ATTRIBUTE SELECTOR -->
+    <section>
+      <h2>Attribute Selector</h2>
+      <p>Here is a link that opens in a new tab:
+        <a href="https://www.example.com" target="_blank">Visit Example</a>
+      </p>
+    </section>
+
+    <!-- COMBINATORS -->
+    <section>
+      <h2>Combinators</h2>
+      <ul class="menu">
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
+      </ul>
+
+      <p>This <em>emphasized</em> text inside a paragraph is styled using a descendant selector.</p>
+
+      <h3>Next Section Heading</h3>
+      <p>This paragraph is styled using the <strong>adjacent sibling (+)</strong> selector.</p>
+
+      <div class="note">This is a note block.</div>
+      <p>This paragraph comes after the note and is styled using <strong>general sibling (~)</strong> selector.</p>
+      <p>Another sibling paragraph — also styled the same way.</p>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 CSS Selector Demo | Created for Practice Exercises
+  </footer>
+</body>
+</html>

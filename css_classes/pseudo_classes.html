@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pseudo-Classes Demonstration</title>
+
+  <style>
+    /* ========== Basic Styling ========== */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f8f9fa;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    header, footer {
+      text-align: center;
+      padding: 1em;
+      background-color: #343a40;
+      color: white;
+    }
+
+    h1 {
+      margin-bottom: 0.3em;
+    }
+
+    main.container {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      padding: 2em;
+      gap: 1.5em;
+    }
+
+    .example {
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      padding: 1.5em;
+      width: 250px;
+      text-align: center;
+    }
+
+    /* ========== :hover Example ========== */
+    .hover-btn {
+      background-color: #007bff;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .hover-btn:hover {
+      background-color: #0056b3;
+    }
+
+    /* ========== :focus Example ========== */
+    .focus-input {
+      padding: 10px;
+      border: 2px solid #ccc;
+      border-radius: 5px;
+      width: 80%;
+      transition: border-color 0.3s;
+    }
+    .focus-input:focus {
+      border-color: #28a745;
+      outline: none;
+    }
+
+    /* ========== :active Example ========== */
+    .active-btn {
+      background-color: #17a2b8;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+    .active-btn:active {
+      background-color: #0b7285;
+    }
+
+    /* ========== :nth-child() Example ========== */
+    .nth-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .nth-list li {
+      padding: 8px;
+      border-radius: 5px;
+      margin-bottom: 5px;
+    }
+    .nth-list li:nth-child(odd) {
+      background-color: #dee2e6;
+    }
+    .nth-list li:nth-child(even) {
+      background-color: #ced4da;
+    }
+
+    /* ========== Responsive Design ========== */
+    @media (max-width: 700px) {
+      main.container {
+        flex-direction: column;
+        align-items: center;
+      }
+      .example {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Pseudo-Classes Demonstration</h1>
+    <p>Examples of :hover, :focus, :active, and :nth-child()</p>
+  </header>
+
+  <main class="container">
+    <!-- Hover Example -->
+    <section class="example">
+      <h2>:hover</h2>
+      <p>Hover over the button to see the background color change.</p>
+      <button class="hover-btn">Hover Me</button>
+    </section>
+
+    <!-- Focus Example -->
+    <section class="example">
+      <h2>:focus</h2>
+      <p>Click or tab into the input box to see the border color change.</p>
+      <input type="text" placeholder="Click or tab here" class="focus-input" />
+    </section>
+
+    <!-- Active Example -->
+    <section class="example">
+      <h2>:active</h2>
+      <p>Press and hold the button to see the color change while active.</p>
+      <button class="active-btn">Click Me</button>
+    </section>
+
+    <!-- nth-child Example -->
+    <section class="example">
+      <h2>:nth-child()</h2>
+      <p>Alternate background colors are applied to list items using nth-child.</p>
+      <ul class="nth-list">
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+        <li>Item 4</li>
+        <li>Item 5</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Pseudo-Class Demo | Created for CSS Exercise</p>
+  </footer>
+</body>
+</html>
