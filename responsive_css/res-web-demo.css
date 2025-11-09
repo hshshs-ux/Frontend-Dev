@@ -1,0 +1,57 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  animation: fadeIn 1s ease-in;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #304ffe;
+  color: white;
+  padding: 15px 30px;
+}
+
+.header nav a {
+  color: white;
+  margin-left: 15px;
+  text-decoration: none;
+}
+
+.main-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+section {
+  background: #e3f2fd;
+  padding: 40px;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+section:hover {
+  transform: scale(1.03);
+}
+
+footer {
+  text-align: center;
+  background: #304ffe;
+  color: white;
+  padding: 10px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@media (max-width: 700px) {
+  .main-grid {
+    grid-template-columns: 1fr;
+  }
+}
