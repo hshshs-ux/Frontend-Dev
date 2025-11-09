@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Personal Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body { background: #f8f9fa; }
+    .profile-img { width: 150px; height: 150px; object-fit: cover; }
+  </style>
+</head>
+<body class="bg-light text-dark text-center p-5">
+  <header class="mb-4">
+    <h1 class="fw-bold">Harshit Singh</h1>
+    <p class="text-muted">Front-End Developer & Designer</p>
+  </header>
+
+  <img src="https://via.placeholder.com/150" alt="Profile" class="img-fluid rounded-circle profile-img mb-3">
+  <div>
+    <button class="btn btn-primary m-2">Hire Me</button>
+    <button class="btn btn-outline-dark m-2">Download CV</button>
+  </div>
+
+  <form class="container mt-4" style="max-width:400px;">
+    <input type="text" class="form-control mb-3" placeholder="Your Name">
+    <input type="email" class="form-control mb-3" placeholder="Your Email">
+    <textarea class="form-control mb-3" placeholder="Message"></textarea>
+    <button class="btn btn-success w-100">Send</button>
+  </form>
+</body>
+</html>
