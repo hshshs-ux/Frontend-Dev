@@ -1,20 +1,16 @@
-// Q10. Citizen Eligibility Validator
-
-// Input values
-let age = 19;            // You can change this value to test
-let isCitizen = true;    // true = citizen, false = non-citizen
-
-// Eligibility check using nested if-else and logical operators
+let age = 19;    
+let isCitizen = true; 
 if (age >= 18) {
   if (isCitizen) {
     if (age >= 21) {
-      console.log("Eligible for all services."); // Vote, Drive, Passport
+      console.log("Eligible for all services."); 
     } else {
-      console.log("Eligible to vote only."); // Citizen but under 21
-    }
+      console.log("Eligible to vote only."); 
+    
   } else {
-    console.log("Only age criteria met."); // Not a citizen but adult
+    console.log("Only age criteria met."); 
   }
 } else {
-  console.log("Not eligible yet."); // Under 18
+  console.log("Not eligible yet.");
 }
+
