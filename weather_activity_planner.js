@@ -1,18 +1,13 @@
-// Q5. Weather Activity Planner
-// This program gives activity suggestions based on weather conditions.
-// It considers temperature, rainfall, and wind speed to suggest what to do.
 
-// Step 1: Declare variables for temperature, isRaining, and windSpeed
-let temperature = 28;    // in °C
-let isRaining = false;   // true = raining, false = not raining
-let windSpeed = 12;      // in km/h
+let temperature = 28;    
+let isRaining = false;   
+let windSpeed = 12;      
 
-// Step 2: Use conditional statements with logical operators to suggest activities
+
 let activityMessage = "";
 
-// Check conditions in order of importance
 if (isRaining) {
-  // Highest priority: if it's raining
+
   activityMessage = "Stay indoors with hot coffee.";
 } else if (temperature > 35) {
   // If it's hot and not raining
@@ -34,3 +29,4 @@ console.log(`Temperature: ${temperature}°C`);
 console.log(`Raining: ${isRaining}`);
 console.log(`Wind Speed: ${windSpeed} km/h`);
 console.log(`Suggestion: ${activityMessage}`);
+
