@@ -30,3 +30,4 @@ console.log(`Raining: ${isRaining}`);
 console.log(`Wind Speed: ${windSpeed} km/h`);
 console.log(`Suggestion: ${activityMessage}`);
 
+
