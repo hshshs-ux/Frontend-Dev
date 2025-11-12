@@ -6,7 +6,6 @@
   <title>CSS Tooltip Demonstration</title>
 
   <style>
-    /* ====== Basic Page Styling ====== */
     body {
       font-family: Arial, sans-serif;
       background-color: #f0f2f5;
@@ -32,8 +31,6 @@
     p {
       color: #555;
     }
-
-    /* ====== Tooltip Container ====== */
     .tooltip-container {
       display: flex;
       justify-content: center;
@@ -42,7 +39,6 @@
       flex-wrap: wrap;
     }
 
-    /* ====== Tooltip Box ====== */
     .tooltip {
       position: relative;
       display: inline-block;
@@ -52,7 +48,6 @@
       font-weight: 600;
     }
 
-    /* ====== Tooltip Text ====== */
     .tooltip .tooltip-text {
       visibility: hidden;
       width: 140px;
@@ -62,7 +57,7 @@
       padding: 8px;
       border-radius: 6px;
       position: absolute;
-      bottom: 125%; /* position above the element */
+      bottom: 125%;
       left: 50%;
       transform: translateX(-50%);
       opacity: 0;
@@ -70,8 +65,6 @@
       pointer-events: none;
       z-index: 10;
     }
-
-    /* Tooltip arrow */
     .tooltip .tooltip-text::after {
       content: "";
       position: absolute;
@@ -82,8 +75,6 @@
       border-style: solid;
       border-color: #333 transparent transparent transparent;
     }
-
-    /* Show tooltip on hover */
     .tooltip:hover .tooltip-text {
       visibility: visible;
       opacity: 1;
@@ -131,3 +122,4 @@
   </footer>
 </body>
 </html>
+
