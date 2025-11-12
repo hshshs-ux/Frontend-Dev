@@ -10,10 +10,10 @@
 <div class="container">
 <h3 class="mb-3">User Dashboard</h3>
 <div class="card p-3">
-<div class="alert alert-success">✅ New message received!</div>
-<div class="alert alert-info">ℹ️ Tip: Update your profile.</div>
+<div class="alert alert-success"> New message received!</div>
+<div class="alert alert-info"> Tip: Update your profile.</div>
 <div class="alert alert-danger alert-dismissible fade show">
-⚠️ Warning: Password expires soon.
+ Warning: Password expires soon.
 <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
 </div>
 <div class="bg-light border p-3 rounded">Summary: You have 3 notifications.</div>
@@ -22,3 +22,4 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
+
