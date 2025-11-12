@@ -6,7 +6,7 @@
   <title>Image Showcase Layout</title>
 
   <style>
-    /* ====== Basic Styling ====== */
+
     body {
       font-family: Arial, sans-serif;
       background-color: #f5f7fa;
@@ -54,7 +54,6 @@
       transition: transform 0.3s ease-in-out;
     }
 
-    /* Overlay effect */
     figure::after {
       content: "";
       position: absolute;
@@ -67,7 +66,6 @@
       border-radius: 12px;
     }
 
-    /* Hover effects */
     figure:hover img {
       transform: scale(1.1);
     }
@@ -76,7 +74,6 @@
       background: rgba(0, 0, 0, 0.4);
     }
 
-    /* Caption styling */
     figcaption {
       text-align: center;
       padding: 0.8em 0;
@@ -85,7 +82,6 @@
       background-color: #fff;
     }
 
-    /* ====== Responsive Design ====== */
     @media (max-width: 700px) {
       main {
         grid-template-columns: 1fr;
@@ -149,3 +145,4 @@
   </footer>
 </body>
 </html>
+
