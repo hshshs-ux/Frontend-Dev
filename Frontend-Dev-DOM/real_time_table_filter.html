@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+<head><meta charset="utf-8"><title>Q6 - Table Filter</title><link rel="stylesheet" href="real_time_table_filter.css"></head>
+<body>
+  <h2>Students</h2>
+  <input id="search" placeholder="Search by name or branch" />
+  <table id="studentsTable" border="1" cellpadding="6" style="margin-top:8px">
+    <thead><tr><th>Name</th><th>Branch</th><th>CGPA</th></tr></thead>
+    <tbody>
+      <tr><td>Alice</td><td>CSE</td><td>9.0</td></tr>
+      <tr><td>Bob</td><td>ME</td><td>8.1</td></tr>
+      <tr><td>Charlie</td><td>CSE</td><td>7.5</td></tr>
+    </tbody>
+  </table>
+  <div id="noResults" style="display:none;margin-top:8px">No results found</div>
+<script src="real_time_table_filter.js"></script>
+</body>
+</html>

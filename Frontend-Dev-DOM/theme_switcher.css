@@ -1,0 +1,5 @@
+body { font-family: Arial; padding:12px; transition: background .2s color .2s; }
+body[data-theme="light"] { background:#fff; color:#111; }
+body[data-theme="dark"] { background:#111; color:#eee; }
+body[data-theme="blue"] { background:#e8f0ff; color:#032; }
+button{margin-right:6px;padding:6px 8px}

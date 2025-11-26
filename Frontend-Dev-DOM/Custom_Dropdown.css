@@ -1,0 +1,5 @@
+body{font-family:Arial;padding:12px}
+.options{border:1px solid #ccc;padding:6px;background:#fff;min-width:140px}
+.options .opt{padding:6px;cursor:pointer}
+.options .opt:hover{background:#f0f0f0}
+button{padding:6px 8px}
