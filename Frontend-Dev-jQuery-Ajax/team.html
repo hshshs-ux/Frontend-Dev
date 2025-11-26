@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Q5 — Team Directory</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <style>
+    .manager { font-weight:bold; cursor:pointer; }
+    .employee { margin-left:16px; cursor:default; }
+    .contact-info { display:none; font-size:90%; color:#555; }
+    .highlight { background:#e8f5e9; }
+  </style>
+</head>
+<body>
+  <main>
+    <section id="directory">
+      <div class="department" data-dept="engineering">
+        <h3 class="dept-name">Engineering</h3>
+        <ul>
+          <li class="manager" data-id="m1">Alice (Manager)</li>
+            <ul>
+              <li class="employee" data-report-to="m1">Bob <span class="contact-info">bob@ex.com</span></li>
+              <li class="employee" data-report-to="m1">Carol <span class="contact-info">carol@ex.com</span></li>
+              <li class="employee" data-report-to="m1">Dave <span class="contact-info">dave@ex.com</span></li>
+            </ul>
+        </ul>
+      </div>
+
+      <div class="department" data-dept="design">
+        <h3 class="dept-name">Design</h3>
+        <ul>
+          <li class="manager" data-id="m2">Eve (Manager)</li>
+            <ul>
+              <li class="employee" data-report-to="m2">Frank <span class="contact-info">frank@ex.com</span></li>
+              <li class="employee" data-report-to="m2">Grace <span class="contact-info">grace@ex.com</span></li>
+              <li class="employee" data-report-to="m2">Heidi <span class="contact-info">heidi@ex.com</span></li>
+            </ul>
+        </ul>
+      </div>
+
+      <button id="random-emp-btn">Select Random Employee</button>
+      <button id="toggle-team-btn">Collapse/Expand Engineering</button>
+    </section>
+  </main>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="team.js"></script>
+</body>
+</html>

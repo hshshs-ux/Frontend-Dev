@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Q6 — Subscriptions</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <style>
+    .topic { margin:6px 0; }
+    .subscribed { font-weight:bold; color:green; }
+    .msg { margin-top:12px; }
+  </style>
+</head>
+<body>
+  <main>
+    <section id="subscriptions">
+      <h2>Topics</h2>
+      <div id="topics-list">
+        <div class="topic" data-topic="news">News <button class="subscribe">Subscribe</button> <button class="unsubscribe">Unsubscribe</button></div>
+        <div class="topic" data-topic="events">Events <button class="subscribe">Subscribe</button> <button class="unsubscribe">Unsubscribe</button></div>
+        <div class="topic" data-topic="offers">Offers <button class="subscribe">Subscribe</button> <button class="unsubscribe">Unsubscribe</button></div>
+        <div class="topic" data-topic="courses">Courses <button class="subscribe">Subscribe</button> <button class="unsubscribe">Unsubscribe</button></div>
+        <div class="topic" data-topic="alerts">Alerts <button class="subscribe">Subscribe</button> <button class="unsubscribe">Unsubscribe</button></div>
+      </div>
+
+      <div id="dynamic-controls">
+        <input id="new-topic" placeholder="New topic name" />
+        <button id="add-topic-btn">Add Topic</button>
+      </div>
+
+      <div id="messages" class="msg"></div>
+    </section>
+  </main>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="subscriptions.js"></script>
+</body>
+</html>

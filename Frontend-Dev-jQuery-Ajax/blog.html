@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Q8 — Blog Admin</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <style>
+    .post { padding:10px; border:1px solid #ddd; margin:8px 0; }
+    .featured { border-color:#ffd54f; }
+  </style>
+</head>
+<body>
+  <main>
+    <section id="admin">
+      <h2>Posts</h2>
+      <button id="add-post">Add New Post</button>
+      <button id="prepend-featured">Prepend Featured Post</button>
+      <button id="remove-last">Remove Last Post</button>
+      <input id="tag-text" placeholder="Tag name" />
+      <button id="add-tag">Add Tag to First Post</button>
+
+      <div id="posts">
+        <div class="post">Intro to JavaScript</div>
+        <div class="post">Python for Data Science</div>
+        <div class="post">Understanding CSS Grid</div>
+        <div class="post">Machine Learning Basics</div>
+        <div class="post">Deploying with Docker</div>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="blog.js"></script>
+</body>
+</html>

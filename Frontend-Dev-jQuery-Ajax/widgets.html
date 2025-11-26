@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Q9 — Multi jQuery Widgets</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <style>
+    .widget { padding:10px; border:1px solid #ddd; display:inline-block; margin:6px; }
+    .active { box-shadow:0 0 8px rgba(0,0,0,0.1); }
+  </style>
+</head>
+<body>
+  <main>
+    <div id="carousel" class="widget">Carousel Area</div>
+    <div id="modal-area" class="widget">Modal Area</div>
+    <div id="widgets" class="widget">Widgets</div>
+  </main>
+
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script>var jq1 = jQuery.noConflict(true);</script>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>var jq3 = jQuery.noConflict(true);</script>
+
+  <script src="widgets.js"></script>
+</body>
+</html>

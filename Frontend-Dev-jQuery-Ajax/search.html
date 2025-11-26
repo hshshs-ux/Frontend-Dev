@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Q7 — Search Courses</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <style>
+    .course { padding:8px; border-bottom:1px solid #eee; }
+    .matched { background:#fffde7; }
+  </style>
+</head>
+<body>
+  <main>
+    <section id="courses">
+      <h2>Courses</h2>
+      <input id="course-search" placeholder="Search courses..." />
+      <button id="clear-search">Clear</button>
+      <div id="count">Matched: 0</div>
+
+      <div id="course-list">
+        <div class="course">JavaScript Essentials</div>
+        <div class="course">Advanced Java (Spring)</div>
+        <div class="course">Data Structures and Algorithms</div>
+        <div class="course">Machine Learning Fundamentals</div>
+        <div class="course">Web Development — HTML & CSS</div>
+        <div class="course">React.js Practical</div>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="search.js"></script>
+</body>
+</html>

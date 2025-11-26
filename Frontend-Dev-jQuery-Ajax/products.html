@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Q2 — Product Highlight</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <style>
+    .product { padding: 12px; margin: 8px; border: 1px solid #ccc; display:block; }
+    .highlight { background: #fffbcc; }
+    .selected { border-color: #ff6b6b; box-shadow: 0 0 6px rgba(255,107,107,0.3); }
+    .discounted { font-weight: bold; color: green; }
+  </style>
+</head>
+<body>
+  <main>
+    <section id="product-list">
+      <article class="product" data-stock="in" data-price="29" data-sku="p1">
+        <h3 class="prod-name">Wireless Mouse</h3>
+        <p class="prod-desc">Comfortable grip, 2.4GHz</p>
+        <span class="fav">♡</span>
+      </article>
+
+      <article class="product" data-stock="out" data-price="15" data-discount="10" data-sku="p2">
+        <h3 class="prod-name">USB Cable</h3>
+        <p class="prod-desc">Type-C durable</p>
+        <span class="fav">♡</span>
+      </article>
+
+      <article class="product" data-stock="in" data-price="120" data-discount="20" data-sku="p3">
+        <h3 class="prod-name">Bluetooth Speaker</h3>
+        <p class="prod-desc">10hr playtime</p>
+        <span class="fav">♡</span>
+      </article>
+
+      <article class="product" data-stock="in" data-price="250" data-sku="p4">
+        <h3 class="prod-name">Headphones</h3>
+        <p class="prod-desc">Noise-cancelling</p>
+        <span class="fav">♡</span>
+      </article>
+
+      <article class="product" data-stock="out" data-price="9" data-discount="5" data-sku="p5">
+        <h3 class="prod-name">Earbud Tips</h3>
+        <p class="prod-desc">Soft silicone</p>
+        <span class="fav">♡</span>
+      </article>
+    </section>
+  </main>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="products.js"></script>
+</body>
+</html>

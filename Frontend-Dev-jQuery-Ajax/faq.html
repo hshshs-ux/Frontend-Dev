@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Q3 — Interactive FAQ</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <style>
+    .question { padding: 8px; margin:6px; border-bottom:1px solid #eee; cursor:pointer; }
+    .answer { display:none; padding:8px 16px; }
+    .focused { background:#f0f9ff; }
+  </style>
+</head>
+<body>
+  <main>
+    <section id="faq">
+      <h2>FAQ</h2>
+
+      <div class="qa">
+        <h3 class="question">What is your refund policy?</h3>
+        <div class="answer">
+          <p>We offer a 30-day refund.</p>
+          <input type="text" class="answer-input" placeholder="Ask a follow-up..." />
+        </div>
+      </div>
+
+      <div class="qa">
+        <h3 class="question">How to contact support?</h3>
+        <div class="answer">
+          <p>Email us at support@example.com</p>
+          <input type="text" class="answer-input" placeholder="Enter your email..." />
+        </div>
+      </div>
+
+      <div class="qa">
+        <h3 class="question">Do you ship internationally?</h3>
+        <div class="answer">
+          <p>Yes — to most countries.</p>
+          <input type="text" class="answer-input" placeholder="Country name..." />
+        </div>
+      </div>
+
+      <div class="qa">
+        <h3 class="question">What payment methods are accepted?</h3>
+        <div class="answer">
+          <p>Visa, MasterCard, PayPal.</p>
+          <input type="text" class="answer-input" placeholder="Any other question..." />
+        </div>
+      </div>
+
+      <div class="qa">
+        <h3 class="question">Can I track my order?</h3>
+        <div class="answer">
+          <p>Yes — tracking link is provided after dispatch.</p>
+          <input type="text" class="answer-input" placeholder="Order ID..." />
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="faq.js"></script>
+</body>
+</html>
